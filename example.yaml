@@ -1,0 +1,41 @@
+schema:
+  mode: "sql" # or "nosql"
+
+  users:
+    type: list
+    count: 3
+    properties:
+      id:
+        type: number
+      name:
+        type: string
+        mock: name
+      friends:
+        type: list
+        count: 2
+        items:
+          type: number
+          relation: users.id
+          
+      posts:
+        type: list
+        count: 2
+        items:
+          type: number
+          relation: posts.id
+
+  posts:
+    type: list
+    count: 3
+    properties:
+      id:
+        type: number
+      writer:
+        type: number
+        relation: users.id
+      title:
+        type: string
+        mock: sentence
+      content:
+        type: string
+        mock: paragraph

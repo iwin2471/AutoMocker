@@ -1,0 +1,33 @@
+{
+  "name": "automocker",
+  "version": "1.0.0",
+  "description": "auto generate json with relation support",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwin2471/AutoMocker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iwin2471/AutoMocker/issues"
+  },
+  "homepage": "https://github.com/iwin2471/AutoMocker#readme",
+  "dependencies": {
+    "@faker-js/faker": "^9.5.0",
+    "@types/faker": "^6.6.8",
+    "@types/node": "^22.13.4",
+    "faker": "^6.6.6",
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "ts-node": "^10.9.2"
+  }
+}
