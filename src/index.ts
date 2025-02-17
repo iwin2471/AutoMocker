@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 import yaml from 'js-yaml';
 import { MockGenerator } from './MockGenerator';
 
@@ -15,5 +16,14 @@ const mockGenerator = new MockGenerator(schema);
 // Generate mock data
 const mockData = mockGenerator.generateMockData();
 
-// Output the generated mock data
-console.log(JSON.stringify(mockData, null, 2));
+// Ensure the generated folder exists in the root working directory
+const generatedFolder = path.join(__dirname, '../generated');
+if (!fs.existsSync(generatedFolder)) {
+  fs.mkdirSync(generatedFolder);
+}
+
+// Save each schema's mock data to a separate JSON file
+Object.keys(mockData).forEach((key) => {
+  const filePath = path.join(generatedFolder, `${key}.json`);
+  fs.writeFileSync(filePath, JSON.stringify(mockData[key], null, 2));
+});

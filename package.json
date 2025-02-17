@@ -21,7 +21,7 @@
     "@faker-js/faker": "^9.5.0",
     "@types/faker": "^6.6.8",
     "@types/node": "^22.13.4",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.0"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
